@@ -92,12 +92,6 @@ some participant, so it decides to abort.
 
 You need to implement a simple distributed KV store. Your KV store should run as a network service on remote machine(s), which can receive clients' operations on the database and return results to clients, through network messages. To cope with failures, your are required to implement your KV store services on multiple machines (which are connected with each other through network). Use 2PC protocol to maintain database consistency among multiple machines. 
 
-Typically, a KV-store exposes the following methods for users to store/delete/read data to/from the databases:
-
-- **set(key, value)**: stores the value "value" with the key "key" (some KV stores also call this command as "**put**").
-- **del(key)**: deletes any record associated with the key "key".
-- **value=get(key)**: retrieves and returns the value associated with the key "key".
-
 To simplify the task, your KV store data is only stored in main memory. Also, the log in 2PC protocol is also only stored in main memory. 
 
 Detailed lab requirements are discussed below.
